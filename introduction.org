@@ -147,10 +147,10 @@ docker logs nostalgic_galois
 
 ** TODO Lesson content [1/8]
 - [X] Labs: Basic Docker Commands-Beta
-- [ ] Labs: Docker Run Commands
-- [ ] Labs: Docker Images
-- [ ] Labs- Environment Variables
-- [ ] Labs- Command & Entrypoint
+- [X] Labs: Docker Run Commands
+- [X] Labs: Docker Images
+- [X] Labs- Environment Variables
+- [X] Labs- Command & Entrypoint
 - [ ] Labs: Docker Compose
 - [ ] Labs: Docker Storage
 - [ ] Labs: Docker Networking
