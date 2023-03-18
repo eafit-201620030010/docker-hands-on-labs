@@ -145,12 +145,12 @@ docker logs nostalgic_galois
 * Hands-On Labs
 [[https://kodekloud.com/courses/labs-docker-for-the-absolute-beginner-hands-on/][KodeKloud Hands-On Labs]]
 
-** TODO Lesson content [1/8]
+** TODO Lesson content [6/8]
 - [X] Labs: Basic Docker Commands-Beta
 - [X] Labs: Docker Run Commands
 - [X] Labs: Docker Images
 - [X] Labs- Environment Variables
 - [X] Labs- Command & Entrypoint
-- [ ] Labs: Docker Compose
+- [X] Labs: Docker Compose
 - [ ] Labs: Docker Storage
 - [ ] Labs: Docker Networking
