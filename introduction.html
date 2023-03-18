@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-03-12 Sun 20:01 -->
+<!-- 2023-03-17 Fri 22:49 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Docker for the Absolute Beginner - Hands-On</title>
@@ -23,32 +23,32 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgd9a5dd5">1. Install Docker (Linux):</a></li>
-<li><a href="#orgc58add2">2. An image for use in the Docker demo tutorial</a></li>
-<li><a href="#orgd1dccd5">3. Docker commands</a>
+<li><a href="#org7480f68">1. Install Docker (Linux):</a></li>
+<li><a href="#orgc1ac2a6">2. An image for use in the Docker demo tutorial</a></li>
+<li><a href="#org080b60a">3. Docker commands</a>
 <ul>
-<li><a href="#org4a1e4c1">3.1. run - start a container</a></li>
-<li><a href="#org5f50b65">3.2. ps - list container</a></li>
-<li><a href="#org36705a7">3.3. stop - stop a container</a></li>
-<li><a href="#org1ec489b">3.4. rm - remove a container</a></li>
-<li><a href="#orgbaab50d">3.5. images - list images</a></li>
-<li><a href="#org4e76ee4">3.6. rmi - remove images</a></li>
-<li><a href="#orge4a4784">3.7. pull - download an image</a></li>
-<li><a href="#org3739b93">3.8. exec - execute a command</a></li>
+<li><a href="#org7511208">3.1. run - start a container</a></li>
+<li><a href="#org84d4bc3">3.2. ps - list container</a></li>
+<li><a href="#org582cbe1">3.3. stop - stop a container</a></li>
+<li><a href="#org9db2cd7">3.4. rm - remove a container</a></li>
+<li><a href="#orga72d37d">3.5. images - list images</a></li>
+<li><a href="#orgfc76ea1">3.6. rmi - remove images</a></li>
+<li><a href="#orgb13437a">3.7. pull - download an image</a></li>
+<li><a href="#org3bba2ff">3.8. exec - execute a command</a></li>
 </ul>
 </li>
-<li><a href="#orgd730066">4. Docker Run</a>
+<li><a href="#org4d02c69">4. Docker Run</a>
 <ul>
-<li><a href="#org43431d7">4.1. Run - Tag</a></li>
-<li><a href="#orgb9d68ba">4.2. Run - PORT mapping</a></li>
-<li><a href="#org8b4d52d">4.3. Run - Volume mapping</a></li>
-<li><a href="#org5548b24">4.4. Inspect container</a></li>
-<li><a href="#org33665d1">4.5. Container logs</a></li>
+<li><a href="#org8d609b0">4.1. Run - Tag</a></li>
+<li><a href="#org43f7825">4.2. Run - PORT mapping</a></li>
+<li><a href="#orgc2e1c04">4.3. Run - Volume mapping</a></li>
+<li><a href="#org63f92ec">4.4. Inspect container</a></li>
+<li><a href="#orgc34981e">4.5. Container logs</a></li>
 </ul>
 </li>
-<li><a href="#org6a4fb98">5. Hands-On Labs</a>
+<li><a href="#org7f02833">5. Hands-On Labs</a>
 <ul>
-<li><a href="#org56d906c">5.1. <span class="todo TODO">TODO</span> Lesson content <code>[1/8]</code></a></li>
+<li><a href="#org6154efc">5.1. <span class="todo TODO">TODO</span> Lesson content <code>[8/8]</code></a></li>
 </ul>
 </li>
 </ul>
@@ -56,8 +56,8 @@
 </div>
 
 
-<div id="outline-container-orgd9a5dd5" class="outline-2">
-<h2 id="orgd9a5dd5"><span class="section-number-2">1.</span> Install Docker (Linux):</h2>
+<div id="outline-container-org7480f68" class="outline-2">
+<h2 id="org7480f68"><span class="section-number-2">1.</span> Install Docker (Linux):</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 <a href="https://docs.docker.com/get-docker/">Docs docker</a>
@@ -65,8 +65,8 @@
 </div>
 </div>
 
-<div id="outline-container-orgc58add2" class="outline-2">
-<h2 id="orgc58add2"><span class="section-number-2">2.</span> An image for use in the Docker demo tutorial</h2>
+<div id="outline-container-orgc1ac2a6" class="outline-2">
+<h2 id="orgc1ac2a6"><span class="section-number-2">2.</span> An image for use in the Docker demo tutorial</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 <a href="https://hub.docker.com/r/docker/whalesay">Docker hub: image whalesay</a>
@@ -79,12 +79,12 @@
 </div>
 </div>
 
-<div id="outline-container-orgd1dccd5" class="outline-2">
-<h2 id="orgd1dccd5"><span class="section-number-2">3.</span> Docker commands</h2>
+<div id="outline-container-org080b60a" class="outline-2">
+<h2 id="org080b60a"><span class="section-number-2">3.</span> Docker commands</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org4a1e4c1" class="outline-3">
-<h3 id="org4a1e4c1"><span class="section-number-3">3.1.</span> run - start a container</h3>
+<div id="outline-container-org7511208" class="outline-3">
+<h3 id="org7511208"><span class="section-number-3">3.1.</span> run - start a container</h3>
 <div class="outline-text-3" id="text-3-1">
 <div class="org-src-container">
 <pre class="src src-shell">docker run nginx
@@ -93,8 +93,8 @@
 </div>
 </div>
 
-<div id="outline-container-org5f50b65" class="outline-3">
-<h3 id="org5f50b65"><span class="section-number-3">3.2.</span> ps - list container</h3>
+<div id="outline-container-org84d4bc3" class="outline-3">
+<h3 id="org84d4bc3"><span class="section-number-3">3.2.</span> ps - list container</h3>
 <div class="outline-text-3" id="text-3-2">
 <div class="org-src-container">
 <pre class="src src-shell">docker ps
@@ -108,8 +108,8 @@
 </div>
 </div>
 
-<div id="outline-container-org36705a7" class="outline-3">
-<h3 id="org36705a7"><span class="section-number-3">3.3.</span> stop - stop a container</h3>
+<div id="outline-container-org582cbe1" class="outline-3">
+<h3 id="org582cbe1"><span class="section-number-3">3.3.</span> stop - stop a container</h3>
 <div class="outline-text-3" id="text-3-3">
 <div class="org-src-container">
 <pre class="src src-shell">docker stop 20871eb58c94
@@ -119,8 +119,8 @@ docker stop <span style="color: #51afef;">{</span><span style="color: #c678dd;">
 </div>
 </div>
 
-<div id="outline-container-org1ec489b" class="outline-3">
-<h3 id="org1ec489b"><span class="section-number-3">3.4.</span> rm - remove a container</h3>
+<div id="outline-container-org9db2cd7" class="outline-3">
+<h3 id="org9db2cd7"><span class="section-number-3">3.4.</span> rm - remove a container</h3>
 <div class="outline-text-3" id="text-3-4">
 <div class="org-src-container">
 <pre class="src src-shell">docker <span style="color: #ECBE7B;">rm</span> sleepy_carson
@@ -129,8 +129,8 @@ docker stop <span style="color: #51afef;">{</span><span style="color: #c678dd;">
 </div>
 </div>
 
-<div id="outline-container-orgbaab50d" class="outline-3">
-<h3 id="orgbaab50d"><span class="section-number-3">3.5.</span> images - list images</h3>
+<div id="outline-container-orga72d37d" class="outline-3">
+<h3 id="orga72d37d"><span class="section-number-3">3.5.</span> images - list images</h3>
 <div class="outline-text-3" id="text-3-5">
 <div class="org-src-container">
 <pre class="src src-shell">docker images
@@ -139,8 +139,8 @@ docker stop <span style="color: #51afef;">{</span><span style="color: #c678dd;">
 </div>
 </div>
 
-<div id="outline-container-org4e76ee4" class="outline-3">
-<h3 id="org4e76ee4"><span class="section-number-3">3.6.</span> rmi - remove images</h3>
+<div id="outline-container-orgfc76ea1" class="outline-3">
+<h3 id="orgfc76ea1"><span class="section-number-3">3.6.</span> rmi - remove images</h3>
 <div class="outline-text-3" id="text-3-6">
 <div class="org-src-container">
 <pre class="src src-shell">docker rmi nginx
@@ -149,8 +149,8 @@ docker stop <span style="color: #51afef;">{</span><span style="color: #c678dd;">
 </div>
 </div>
 
-<div id="outline-container-orge4a4784" class="outline-3">
-<h3 id="orge4a4784"><span class="section-number-3">3.7.</span> pull - download an image</h3>
+<div id="outline-container-orgb13437a" class="outline-3">
+<h3 id="orgb13437a"><span class="section-number-3">3.7.</span> pull - download an image</h3>
 <div class="outline-text-3" id="text-3-7">
 <div class="org-src-container">
 <pre class="src src-shell">docker pull nginx
@@ -159,8 +159,8 @@ docker stop <span style="color: #51afef;">{</span><span style="color: #c678dd;">
 </div>
 </div>
 
-<div id="outline-container-org3739b93" class="outline-3">
-<h3 id="org3739b93"><span class="section-number-3">3.8.</span> exec - execute a command</h3>
+<div id="outline-container-org3bba2ff" class="outline-3">
+<h3 id="org3bba2ff"><span class="section-number-3">3.8.</span> exec - execute a command</h3>
 <div class="outline-text-3" id="text-3-8">
 <div class="org-src-container">
 <pre class="src src-shell">docker run ubunto
@@ -176,12 +176,12 @@ docker stop <span style="color: #51afef;">{</span><span style="color: #c678dd;">
 </div>
 </div>
 
-<div id="outline-container-orgd730066" class="outline-2">
-<h2 id="orgd730066"><span class="section-number-2">4.</span> Docker Run</h2>
+<div id="outline-container-org4d02c69" class="outline-2">
+<h2 id="org4d02c69"><span class="section-number-2">4.</span> Docker Run</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org43431d7" class="outline-3">
-<h3 id="org43431d7"><span class="section-number-3">4.1.</span> Run - Tag</h3>
+<div id="outline-container-org8d609b0" class="outline-3">
+<h3 id="org8d609b0"><span class="section-number-3">4.1.</span> Run - Tag</h3>
 <div class="outline-text-3" id="text-4-1">
 <div class="org-src-container">
 <pre class="src src-shell">docker run redis
@@ -200,8 +200,8 @@ docker stop <span style="color: #51afef;">{</span><span style="color: #c678dd;">
 </div>
 </div>
 
-<div id="outline-container-orgb9d68ba" class="outline-3">
-<h3 id="orgb9d68ba"><span class="section-number-3">4.2.</span> Run - PORT mapping</h3>
+<div id="outline-container-org43f7825" class="outline-3">
+<h3 id="org43f7825"><span class="section-number-3">4.2.</span> Run - PORT mapping</h3>
 <div class="outline-text-3" id="text-4-2">
 <pre class="example">
 docker run -p 80:5000 kodekloud/webapp
@@ -214,8 +214,8 @@ docker run -p 80:5000 kodekloud/webapp
 </div>
 </div>
 
-<div id="outline-container-org8b4d52d" class="outline-3">
-<h3 id="org8b4d52d"><span class="section-number-3">4.3.</span> Run - Volume mapping</h3>
+<div id="outline-container-orgc2e1c04" class="outline-3">
+<h3 id="orgc2e1c04"><span class="section-number-3">4.3.</span> Run - Volume mapping</h3>
 <div class="outline-text-3" id="text-4-3">
 <div class="org-src-container">
 <pre class="src src-shell">docker run mysql
@@ -235,8 +235,8 @@ docker <span style="color: #ECBE7B;">rm</span> mysql
 </div>
 </div>
 
-<div id="outline-container-org5548b24" class="outline-3">
-<h3 id="org5548b24"><span class="section-number-3">4.4.</span> Inspect container</h3>
+<div id="outline-container-org63f92ec" class="outline-3">
+<h3 id="org63f92ec"><span class="section-number-3">4.4.</span> Inspect container</h3>
 <div class="outline-text-3" id="text-4-4">
 <div class="org-src-container">
 <pre class="src src-shell">docker inspect nostalgic_galois
@@ -245,8 +245,8 @@ docker <span style="color: #ECBE7B;">rm</span> mysql
 </div>
 </div>
 
-<div id="outline-container-org33665d1" class="outline-3">
-<h3 id="org33665d1"><span class="section-number-3">4.5.</span> Container logs</h3>
+<div id="outline-container-orgc34981e" class="outline-3">
+<h3 id="orgc34981e"><span class="section-number-3">4.5.</span> Container logs</h3>
 <div class="outline-text-3" id="text-4-5">
 <div class="org-src-container">
 <pre class="src src-shel">docker logs nostalgic_galois
@@ -259,16 +259,16 @@ docker <span style="color: #ECBE7B;">rm</span> mysql
 
 
 
-<div id="outline-container-org6a4fb98" class="outline-2">
-<h2 id="org6a4fb98"><span class="section-number-2">5.</span> Hands-On Labs</h2>
+<div id="outline-container-org7f02833" class="outline-2">
+<h2 id="org7f02833"><span class="section-number-2">5.</span> Hands-On Labs</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 <a href="https://kodekloud.com/courses/labs-docker-for-the-absolute-beginner-hands-on/">KodeKloud Hands-On Labs</a>
 </p>
 </div>
 
-<div id="outline-container-org56d906c" class="outline-3">
-<h3 id="org56d906c"><span class="section-number-3">5.1.</span> <span class="todo TODO">TODO</span> Lesson content <code>[1/8]</code></h3>
+<div id="outline-container-org6154efc" class="outline-3">
+<h3 id="org6154efc"><span class="section-number-3">5.1.</span> <span class="todo TODO">TODO</span> Lesson content <code>[8/8]</code></h3>
 <div class="outline-text-3" id="text-5-1">
 <ul class="org-ul">
 <li class="on"><code>[X]</code> Labs: Basic Docker Commands-Beta</li>
@@ -276,9 +276,9 @@ docker <span style="color: #ECBE7B;">rm</span> mysql
 <li class="on"><code>[X]</code> Labs: Docker Images</li>
 <li class="on"><code>[X]</code> Labs- Environment Variables</li>
 <li class="on"><code>[X]</code> Labs- Command &amp; Entrypoint</li>
-<li class="off"><code>[&#xa0;]</code> Labs: Docker Compose</li>
-<li class="off"><code>[&#xa0;]</code> Labs: Docker Storage</li>
-<li class="off"><code>[&#xa0;]</code> Labs: Docker Networking</li>
+<li class="on"><code>[X]</code> Labs: Docker Compose</li>
+<li class="on"><code>[X]</code> Labs: Docker Storage</li>
+<li class="on"><code>[X]</code> Labs: Docker Networking</li>
 </ul>
 </div>
 </div>
@@ -286,7 +286,7 @@ docker <span style="color: #ECBE7B;">rm</span> mysql
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: jjchavarrg</p>
-<p class="date">Created: 2023-03-12 Sun 20:01</p>
+<p class="date">Created: 2023-03-17 Fri 22:49</p>
 </div>
 </body>
 </html>
